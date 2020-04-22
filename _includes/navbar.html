@@ -1,11 +1,11 @@
-<header id="navbar">
-	<nav id="logobar">
+<nav id="navbar">
+	<section id="logobar">
 		<a href="/" class="logo"><h1>Legacy Homes</h1></a>
 		<a href="#" class="hamburger">{% include hamburger.svg %}</a>
-	</nav>
-	<nav id="pagelinks">
+	</section>
+	<section id="pagelinks">
 		{% for link in site.data.navigation %}
 			<a class="{{ link.type }}{% if page.url == link.href %} active{% endif %}" href="{{ link.href }}">{{ link.label }}</a>
 		{% endfor %}
-	</nav>
-</header>
+	</section>
+</nav>
