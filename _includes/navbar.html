@@ -5,7 +5,7 @@
 	</section>
 	<section id="pagelinks">
 		{% for link in site.data.navigation %}
-			<a class="{{ link.type }}{% if page.url == link.href %} active{% endif %}" href="{{ link.href }}">{{ link.label }}</a>
+			<a class="link {% if page.url == link.href %}active{% endif %}" href="{{ link.href }}">{{ link.label }}</a>
 		{% endfor %}
 	</section>
 </nav>
