@@ -1,0 +1,79 @@
+@import 'colors'
+@import 'borders'
+@import 'dimensions'
+@import 'media'
+
+// Top navigation bar
+#navbar
+	display: flex
+	flex-direction: column
+	align-items: baseline
+	justify-content: space-between
+	user-select: none
+	background-color: $colors_navbar
+	border-bottom: $borders_accent
+
+	// Laptop and up
+	@include media_laptop
+		flex-direction: row
+
+	// Logo and hamburger section
+	#logobar
+		display: flex
+		flex-direction: row
+		align-items: baseline
+		justify-content: space-between
+		width: 100%
+		padding: $dimensions_narrow-spacing
+
+		// Hamburger button
+		.hamburger
+
+			// Laptop and up
+			@include media_laptop
+				display: none
+
+			// Vector graphic
+			svg
+				fill: $colors_text
+
+	// Pages links section
+	#pagelinks
+		display: none
+		flex-direction: column
+		align-items: baseline
+		justify-content: space-between
+		width: 100%
+		padding: $dimensions_narrow-spacing
+		background-color: $colors_accent
+
+		// Laptop and up
+		@include media_laptop
+			display: flex
+			width: unset
+			white-space: nowrap
+			flex-direction: row
+			background-color: unset
+
+		// Individual links
+		.link
+			display: block
+			margin: 0.2rem
+
+			// Laptop and up
+			@include media_laptop
+				margin: 0 ($dimensions_narrow-spacing / 2)
+			
+			// Link pointing to the current page
+			&.active
+				font-weight: 700
+
+				// Laptop and up
+				@include media_laptop
+					font-weight: inherit
+					border-bottom: $borders_text
+
+	// Expanded navbar
+	&.expanded
+		#pagelinks
+			display: flex

@@ -1,0 +1,16 @@
+@import 'dimensions'
+
+// Desktop/large laptop dimensions and up
+@mixin media_desktop
+	@media (min-width: $dimensions_desktop-minimum)
+		@content
+
+// Small laptop dimensions and up
+@mixin media_laptop
+	@media (min-width: $dimensions_laptop-minimum)
+		@content
+
+// Tablet dimensions and up
+@mixin media_tablet
+	@media (min-width: $dimensions_tablet-minimum)
+		@content
