@@ -1,0 +1,11 @@
+<header id="navbar">
+	<nav class="logo">
+		<a href="/" class="logo"><h1>Legacy Homes</h1></a>
+		<a href="#" class="hamburger">{% include hamburger.svg %}</a>
+	</nav>
+	<nav class="links">
+		{% for link in site.data.navigation %}
+			<a class="{{ link.type }}{% if page.url == link.href %} active{% endif %}" href="{{ link.href }}">{{ link.label }}</a>
+		{% endfor %}
+	</nav>
+</header>
