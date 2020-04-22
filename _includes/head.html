@@ -7,9 +7,5 @@
 	{% for script in page.scripts %}
 		<script {{ script.attributes }} src="{{ script.src }}"></script>
 	{% endfor %}
-	{% if page.title %}
-		<title>{{ page.title }} | Legacy Builders LLC</title>
-	{% else %}
-		<title>Legacy Builders LLC</title>
-	{% endif %}
+	<title>{% if page.title %}{{ page.title }} | {% endif %}Legacy Builders LLC</title>
 </head>
