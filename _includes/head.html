@@ -3,9 +3,10 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Open+Sans&family=Roboto:wght@900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/main.css">
-	{% if page.script %}
-		<script src="index.js"></script>
-	{% endif %}
+	<script src="/index.js"></script>
+	{% for script in page.scripts %}
+		<script {{ script.attributes }} src="{{ script.src }}"></script>
+	{% endfor %}
 	{% if page.title %}
 		<title>{{ page.title }} | Legacy Builders LLC</title>
 	{% else %}
