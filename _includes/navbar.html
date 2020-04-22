@@ -1,9 +1,9 @@
 <header id="navbar">
-	<nav class="logo">
+	<nav id="logobar">
 		<a href="/" class="logo"><h1>Legacy Homes</h1></a>
 		<a href="#" class="hamburger">{% include hamburger.svg %}</a>
 	</nav>
-	<nav class="links">
+	<nav id="pagelinks">
 		{% for link in site.data.navigation %}
 			<a class="{{ link.type }}{% if page.url == link.href %} active{% endif %}" href="{{ link.href }}">{{ link.label }}</a>
 		{% endfor %}
