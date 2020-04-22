@@ -1,6 +1,6 @@
 @import 'colors'
 @import 'borders'
-@import 'dimensions'
+@import 'spacing'
 @import 'media'
 
 // Top navigation bar
@@ -24,7 +24,7 @@
 		align-items: baseline
 		justify-content: space-between
 		width: 100%
-		padding: $dimensions_narrow-spacing
+		padding: $spacing_subcontainer-padding
 
 		// Hamburger button
 		.hamburger
@@ -44,7 +44,7 @@
 		align-items: baseline
 		justify-content: space-between
 		width: 100%
-		padding: $dimensions_narrow-spacing
+		padding: $spacing_subcontainer-padding
 		background-color: $colors_accent
 
 		// Laptop and up
@@ -58,12 +58,15 @@
 		// Individual links
 		.link
 			display: block
-			margin: 0.2rem
+			margin-bottom: $spacing_paragraph-break
 
 			// Laptop and up
 			@include media_laptop
-				margin: 0 ($dimensions_narrow-spacing / 2)
-			
+				marigin-bottom: 0
+				margin-right: $spacing_gap
+				&:last-child
+					margin-right: 0
+
 			// Link pointing to the current page
 			&.active
 				font-weight: 700

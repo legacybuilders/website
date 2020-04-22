@@ -1,16 +1,19 @@
-@import 'dimensions'
+// Minimum screen widths
+$media_tablet-minimum: 38rem
+$media_laptop-minimum: 56rem
+$media_desktop-minimum: 75rem
 
 // Desktop/large laptop dimensions and up
 @mixin media_desktop
-	@media (min-width: $dimensions_desktop-minimum)
+	@media (min-width: $media_desktop-minimum)
 		@content
 
 // Small laptop dimensions and up
 @mixin media_laptop
-	@media (min-width: $dimensions_laptop-minimum)
+	@media (min-width: $media_laptop-minimum)
 		@content
 
 // Tablet dimensions and up
 @mixin media_tablet
-	@media (min-width: $dimensions_tablet-minimum)
+	@media (min-width: $media_tablet-minimum)
 		@content
