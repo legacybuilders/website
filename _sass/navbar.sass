@@ -7,7 +7,7 @@
 #navbar
 	display: flex
 	flex-direction: column
-	align-items: baseline
+	align-items: center
 	justify-content: space-between
 	user-select: none
 	background-color: $colors_navbar
@@ -21,7 +21,7 @@
 	#logobar
 		display: flex
 		flex-direction: row
-		align-items: baseline
+		align-items: center
 		justify-content: space-between
 		width: 100%
 		padding: $spacing_subcontainer-padding
@@ -29,6 +29,11 @@
 		// Logo
 		.logo
 			color: $colors_inverted-text
+
+			// Tablet and up
+			@include media_tablet
+				font-size: 140%
+
 
 		// Hamburger button
 		.hamburger
@@ -67,7 +72,7 @@
 
 			// Laptop and up
 			@include media_laptop
-				marigin-bottom: 0
+				margin-bottom: 0
 				margin-right: $spacing_gap
 				&:last-child
 					margin-right: 0
